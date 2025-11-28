@@ -1,8 +1,1 @@
-/manifest.json   /manifest.json   200
-/favicon.ico     /favicon.ico     200
-/logo192.png     /logo192.png     200
-/logo512.png     /logo512.png     200
-/robots.txt      /robots.txt      200
-/*.js            /:splat          200
-/*.css           /:splat          200
 /*               /index.html      200
