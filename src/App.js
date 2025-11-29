@@ -1,17 +1,34 @@
-// src/App.js (LOOKS CORRECT)
 import React from "react";
-// You are importing BrowserRouter as Router, which is fine, but slightly confusing.
-// It's cleaner to use only one of the names throughout the app.
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// ... (rest of imports)
+
+// FIX: Ensure all component paths are correct and committed to Git
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
+import Skills from "./pages/Skills";
+import Admin from "./pages/Admin";
+import Certifications from "./pages/Certifications";
 
 function App() {
   return (
-    <Router> {/* This is the BrowserRouter imported as Router */}
-      <Navbar />
+    // Router is used here, defined as BrowserRouter in index.js
+    <Router>
+      {/* Navbar is outside Routes so it appears on all pages */}
+      <Navbar /> 
+      
+      {/* Routes define which component to render for a given path */}
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Your Home path is at the root */}
-        {/* ... (rest of routes) ... */}
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/certifications" element={<Certifications />} />
       </Routes>
     </Router>
   );
